@@ -1,2 +1,35 @@
-body
-  background-color: #fa3434
+$blueprint-grid-culumn : 24
+$blueprint-grid-width : 30px
+$blueprint-grid-margin : 10px
+
+@import blueprint
+
+#wrapper
+  +container
+
+h1
+  font-size: 3em
+  font-weight: bold
+
+li
+  padding: 20px 0
+  list-style: none
+
+  .job_link
+    float: left
+
+  .job_title
+    +column(6)
+    font-size: 1.4em
+
+  .job_description
+    +column(18, true)
+    display: block
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+.new_job_link
+  float: right
+  font-weitht: bold
+  font-size: 2em
